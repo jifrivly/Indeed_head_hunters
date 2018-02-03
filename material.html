@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Materializecss Tests</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+
+
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    
+
+    
+
+
+    <div class="row">
+        <div class="col s12 m9 l10">
+        <div id="introduction" class="section scrollspy" style="padding-bottom: 400px;">
+            <h2>Introduction</h2>
+            <p>Content </p>
+        </div>
+
+        <div id="structure" class="section scrollspy" style="padding-bottom: 400px;">
+            <h2>Structure</h2>
+            <p>Content </p>
+        </div>
+
+        <div id="initialization" class="section scrollspy" style="padding-bottom: 400px;">
+            <h2>Initialization</h2>
+            <p>Content </p>
+        </div>
+        </div>
+        <div class="col hide-on-small-only m3 l2 " >
+        <ul class="section table-of-contents" style="position: fixed; ">
+            <h5>Table of Content</h5>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#initialization">Intialization</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m5 l6">
+            <h3>Forms</h3>
+            <form action="">
+                <div class="input-field">
+                    <input type="text" name="name" id="name1">
+                    <label for="name" class="active">Name</label>
+
+                </div>
+            </form>
+
+
+
+
+
+            <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                        </div>
+                    </div>
+    
+                    <div class="col s12 m3">
+                        <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                        </div>
+                    </div>
+    
+                    <div class="col s12 m3">
+                        <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col s12 m3">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-image">
+                                <img src="<?php echo base_url();?>images/swisscom.png">
+                                <span class="card-title">Card Title</span>
+                            </div>
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+
+  <script>
+        $(document).ready(function(){
+        $('.scrollspy').scrollSpy();
+        });
+    </script>
+
+
+</body>
+</html>
