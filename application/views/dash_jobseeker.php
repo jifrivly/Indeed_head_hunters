@@ -152,21 +152,21 @@
                         <h6 class="dropdown-header">New Messages:</h6>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">
-                        <strong>Company 1</strong>
-                        <span class="small float-right text-muted">11:21 AM</span>
-                        <div class="dropdown-message small">Hey there! This is a new message from company 1 </div>
+                            <strong>Company 1</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This is a new message from company 1 </div>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">
-                        <strong>Company 2</strong>
-                        <span class="small float-right text-muted">11:21 AM</span>
-                        <div class="dropdown-message small">Hey there! This is a new message from Company 2</div>
+                            <strong>Company 2</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This is a new message from Company 2</div>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">
-                        <strong>Admin </strong>
-                        <span class="small float-right text-muted">11:21 AM</span>
-                        <div class="dropdown-message small">Hey there! This is a new message from Admin</div>
+                            <strong>Admin </strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This is a new message from Admin</div>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item small" href="#">View all messages</a>
@@ -231,7 +231,7 @@
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                    <i class="fa fa-fw fa-sign-out-alt"></i>Logout</a>
                 </li>
             </ul>
         </div>

@@ -42,7 +42,7 @@
 
 <!-- BOOTSTRAP -->
     <!--Import Google Icon Font-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" > -->
 
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -81,14 +81,14 @@
 <!-- Navigaton bar -->
     <nav class=" navbar navbar-inverse navbar-fixed-top " id="navbar" role="tablist">
         <div class="navbar-header">
-            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbaritem">
+            <button type="button" class="navbar-toggle navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbaritem" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-            </button> -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
             </button>
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbaritem" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
             <a class="navbar-brand" href="#main">INDEED HEADHUNTERS</a>
         </div>
         
@@ -350,6 +350,8 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
+    
+
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -360,16 +362,9 @@
 
 <!-- Materialize -->
         <!--Materialize JavaScript -->
-        <script type="text/javascript" src="<?php echo base_url();?>js/materialize.min.js"></script>
+        <!-- <script type="text/javascript" src="<?php echo base_url();?>js/materialize.min.js"></script> -->
 
     </body>
 </html>  
 
         
-
-
-
-
-
-        
-    
