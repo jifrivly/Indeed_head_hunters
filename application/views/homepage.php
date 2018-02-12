@@ -20,11 +20,9 @@
     
 <!-- BOOTSTRAP -->
     <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php echo $boot_css; ?>">
-    
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/bootstrap.min.css'); ?>"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
 <!-- MATERIALIZE -->
@@ -72,106 +70,69 @@
 </head>
 
 
-<body data-spy="scroll" data-target=".navbar" data-offset="1000">
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
 
+    <?php include('navbar.php') ?>
 
-
-    <!-- <script>$('body').scrollspy({ target: '#navbar' });</script> -->
-    
-<!-- Navigaton bar -->
-    <nav class=" navbar navbar-inverse navbar-fixed-top " id="navbar" role="tablist">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbaritem" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbaritem" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <a class="navbar-brand" href="#main">INDEED HEADHUNTERS</a>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="navbaritem">
-            <ul class="nav nav-pills navbar-nav" >
-                <li class="nav-item"><a class="nav-link " href="#registration" >Registration</a></li> 
-                <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="#companies">Companies</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact"> Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about"> About</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-
-    <!-- header -->
+<!-- header -->
 
     <div class="main" id="main">
         <h3 class="center-align" style=" font-size: 8vw; color: rgb(15, 194, 234);"> INDEED HEADHUNTERS </h3>
-        <a href="#registration"> <button type="button" class="btn btn-outline-primary waves-effect waves-light" >Registration</button></a>
-        <a href="#login"> <button type="button" class="btn btn-outline-danger waves-effect waves-light" >Login</button></a>
-        <a href="#companies"> <button type="button" class="btn btn-outline-primary waves-effect waves-light" >Companies</button></a>
-        <a href="#contact"> <button type="button" class="btn btn-outline-danger waves-effect waves-light" >Contact</button></a>
-        <a href="#about"> <button type="button" class="btn btn-outline-primary waves-effect waves-light" >About</button></a>
-
-
+        <a href="#registrationorlogin"> <button type="button" class="btn btn-outline-primary waves-effect waves-light" >Registration / Login</button></a>
+        <a href="#companies"> <button type="button" class="btn btn-outline-danger waves-effect waves-light" >Companies</button></a>
+        <a href="#contact"> <button type="button" class="btn btn-outline-primary waves-effect waves-light" >Contact</button></a>
+        <a href="#about"> <button type="button" class="btn btn-outline-danger waves-effect waves-light" >About</button></a>
 
     </div>
 
-    
 
 
-
-    <!-- Registration -->
-
-    <div class="regibg">
+    <div class="row regilogi" id="registrationorlogin">
+<!-- Registration -->
+    <div class="regibg col-md-6">
         <div id="registration" class="regi">
                 
-            <button type="button" class="btn btn-outline-success waves-effect waves-light" >Register as JOB SEEKER</button>
-        
-            <button type="button" class="btn btn-outline-info waves-effect waves-light" >Register as COMPANY</button>
+            <a href="<?php base_url();?>index.php/JobSeeker/Registration"> 
+                <button type="button" class="btn btn-outline-success waves-effect waves-light" >Register as JOB SEEKER</button>
+            </a>
+            <br><br><br><br><br>
+            <a href="<?php base_url();?>index.php/Company/Registration">
+                <button type="button" class="btn btn-outline-info waves-effect waves-light" >Register as COMPANY</button>
+            </a>
             
         
         </div>
 
-        <div class="devider">
-            <a href="#login"> <i class="fas fa-angle-double-down"></i> </a>
-                    
-        </div>  
+        <div class="devider visible-sm">
+            <a href="#login"> <i class="fas fa-angle-double-down"></i> </a>            
+        </div>
 
+        
     </div>
     
-    
-    
-    
-    <!-- Login -->
 
-
-    <div class="logibg">
+<!-- Login -->
+    <div class="logibg col-md-6">
 
         <div id="login" class="logi">
 
-            <button class="btn btn-outline-primary waves-effect waves-light" >JOB SEEKER LOGIN</button>
-
-            <button class="btn btn-outline-danger waves-effect waves-light"> COMPANY LOGIN </button>
-
-        </div>
-
-        <div class="devider">
-                <a href="#companies"> <i class="fas fa-angle-double-down"></i> </a>
+            <a href="<?php base_url();?>index.php/Login">
+                <button class="btn btn-outline-primary waves-effect waves-light" > LOGIN </button>
+            </a>
 
         </div>
 
     </div>
+
+    <div class="devider col-md-12">
+        <a href="#companies"> <i class="fas fa-angle-double-down"></i> </a>            
+    </div>
         
+    </div>
 
 
-    <!-- Companies -->
 
-    
-
+<!-- Companies -->
     <div class="ss" style=" margin: 3px; " id="companies" >
     <!-- Card-Deck starts -->
         <div class="card-deck text-center">
@@ -268,90 +229,91 @@
 
 
 
-    <!-- Contact with Admin -->
+<!-- Contact with Admin -->
+    <div id="contact" >
+        <div class="row">
+        <div class=" col-lg-offset-2 col-lg-8 col-sm-12">
+            <div class="card hoverable">
+            <div class="card-header center-align"> <h5> Contact with us </h5></div>                
+            <form action="" method="post">
 
-        
-        <div id="contact" >
-            <div class="row">
-            <div class=" col-lg-offset-2 col-lg-8 col-sm-12">
-                <div class="card hoverable">
-                <div class="card-header center-align"> <h5> Contact with us </h5></div>                
-                <form action="" method="post">
-
-        <!-- Email -->
-                    <div class="row">
-                        <div class="input-field col l12 s12">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                            <span class="helper-text pull-left" data-error="it seems wrong" data-success="right">Enter active email address</span>
-                        </div>
+    <!-- Email -->
+                <div class="row">
+                    <div class="input-field col l12 s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                        <span class="helper-text pull-left" data-error="it seems wrong" data-success="right">Enter active email address</span>
                     </div>
-
-
-        <!-- Subject -->
-                    <div class="row">
-                        <div class="input-field col l12 s12">
-                            <input id="e_subject" type="text" >
-                            <label for="email">Subject</label>
-                            <span class="helper-text pull-left" >Subject of your message</span>
-                        </div>
-                    </div> 
-
-
-        <!-- Message -->
-                    <div class="row">
-                        <div class="input-field col l12 s12">
-                            <textarea name="message" id="common_message" class="materialize-textarea" ></textarea>
-                            <label for="common_message">Message </label>
-                            <span class="helper-text pull-left">(Request, Comment, etc. )</span>
-                        </div>
-                    </div>
-                    <div class="right-align">
-                            <button class="btn waves-effect waves-light " type="submit" name="action">Submit
-                            <i class="material-icons right">send</i></button>
-                    </div>
-                </form>
                 </div>
 
+
+    <!-- Subject -->
+                <div class="row">
+                    <div class="input-field col l12 s12">
+                        <input id="e_subject" type="text" >
+                        <label for="email">Subject</label>
+                        <span class="helper-text pull-left" >Subject of your message</span>
+                    </div>
+                </div> 
+
+
+    <!-- Message -->
+                <div class="row">
+                    <div class="input-field col l12 s12">
+                        <textarea name="message" id="common_message" class="materialize-textarea" ></textarea>
+                        <label for="common_message">Message </label>
+                        <span class="helper-text pull-left">(Request, Comment, etc. )</span>
+                    </div>
+                </div>
+                <div class="right-align">
+                        <button class="btn waves-effect waves-light " type="submit" name="action">Submit
+                        <i class="material-icons right">send</i></button>
+                </div>
+            </form>
             </div>
-            </div>
+
+        </div>
+        </div>
             
 
-            <div class="devider">
-                <a href="#about"> <i class="fas fa-angle-double-down"></i> </a>&emsp;&emsp;&emsp;&emsp;
-                <a href="#main"> <i class="fas fa-angle-double-up"></i> </a>
-            </div>
-
+        <div class="devider">
+            <a href="#about"> <i class="fas fa-angle-double-down"></i> </a>&emsp;&emsp;&emsp;&emsp;
+            <a href="#main"> <i class="fas fa-angle-double-up"></i> </a>
         </div>
+
+    </div>
         
 
 
         
 
-    <!-- About  -->
+<!-- About  -->
 
 
 
-        <div id="about">
+    <div id="about">
 
-                <?php include('footer.php'); ?>
+            <?php include('footer.php'); ?>
 
-        </div>
+    </div>
 
+    <?php
+        foreach ($_SESSION as $x => $y) {
+            echo $x . " = " . $y . "<br>";
+        }
+    ?>
 
         
 
 <!-- JS -->
 
 <!-- Bootstrap -->
-.
         <!-- Bootstrap Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-    
-
+        
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -41,7 +41,7 @@ class Home extends CI_Controller {
 
 
 // local
-			'boot_css' => base_url('/css/bootstrap.min.css'),
+
 			'my_css' => base_url('/css/my_style.css'),
 			'boot_js' => base_url('/js/bootstrap.min.js'),
 
@@ -91,68 +91,4 @@ class Home extends CI_Controller {
 	}
 
 	
-
-	public function JobSeekerRegistration()		
-	{
-		$project = array(
-			'reg_js' => "JOB SEEKER Registration Form ",
-
-			'my_css' => base_url('/css/my_style.css'),			
-			
-			'font_awesome' => '<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">',
-			
-			'materialize_css' => '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">',
-			
-			// jquery-3.2.1.slim.min.js
-			'jquery' => '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>',
-		);
-		
-		// $this->load->view('header');
-		
-		$this->load->view('reg_jobseeker',$project);
-		$this->load->view('elapsed_time');
-	}
-
-	public function CompanyRegistration()
-	{
-		$project = array(
-			'reg_js' => "JOB SEEKER Registration Form ",
-
-			'my_css' => base_url('/css/my_style.css'),			
-			
-			'font_awesome' => '<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">',
-			
-			'materialize_css' => '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">',
-			
-			// jquery-3.2.1.slim.min.js
-			'jquery' => '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>',
-		);
-
-
-		$this->load->view('reg_company',$project);
-		$this->load->view('elapsed_time');
-		
-	}
-
-
-	public function DashBoardJobSeeker()
-	{
-		$this->load->view('dash_jobseeker');
-		$this->load->view('elapsed_time');
-
-	}
-
-	public function LoginJobSeeker()
-	{
-		$this->load->view('login_jobseeker');
-		$this->load->view('elapsed_time');
-	}
-
-	public function LoginCompany()
-	{
-		$this->load->view('login_company');
-		$this->load->view('elapsed_time');
-	}
 }

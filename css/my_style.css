@@ -33,6 +33,11 @@
 
 
 
+.regilogi{
+  text-align: center;
+  border: thin dashed blueviolet;
+}
+
 /* registration part */
 .regibg{
     background-color: azure;
@@ -46,7 +51,7 @@
 {
     /* background-image: url('images/bg.jpg'); */
     text-align: center;
-    padding: 250px 0px;
+    padding: 200px 0px;
     border: thin dashed red;
     
     
@@ -65,7 +70,7 @@
 
 .logi{ 
     text-align: center;
-    padding: 250px 0px;
+    padding: 265px 0px;
     border: thin dotted green;
     
 }
@@ -85,15 +90,18 @@
     padding: 10px 20px; 
   }
 
-.regi button ,
-.logi button{
-  
+.regi button{
     font-size: 20px;
     font-family: Verdana;
     border-radius: 30px;
     padding: 10px 20px; 
+}
 
-    
+.logi button{
+    font-size: 20px;
+    font-family: Verdana;
+    border-radius: 30px;
+    padding: 10px 40px;
 }
 
 

@@ -1,9 +1,18 @@
+Company registraton
+___________________
 
-Password is Case-Sensitive. Use 6 to 40 characters.
-Please specify a password
+*email and mobile number unique checking 
+*compny email and mobile number with person email and mobile number
+*user name unque checking
 
-Recruiters will contact you on this number.
-Please specify a valid mobile number
+JS registraton
+______________
+
+*email and mobile number unique checking 
+
+
+
+
 smhjifrivly1@gmail is Not a Valid Email Id. Please Enter a Valid Email Id
 
 
@@ -64,3 +73,158 @@ Your Resume Headline is the first thing Recruiters will see. View example
 Save & Next
         
     
+
+
+
+
+                Select Industry *
+                    {
+                        Accounting / Audit / Taxation
+                        Administration / Clerical Support / Secretarial
+                        Advertising
+                        Aerospace / Aviation
+                        Agriculture / Forestry / Fishing
+                        Airline
+                        Architectural Services
+                        Athletics / Fitness / Sports & Recreation
+                        AutomotiveBanking / Finance / SecuritiesBuilding / Construction
+                        Business Analysis / Data Analysis
+                        Business Consultancy
+                        Business Development
+                        Call Centre
+                        Chemical
+                        Civil Services
+                        Counseling
+                        Credit Collection
+                        Customer Service
+                        Design
+                        Documentary Credit / Bills Processing
+                        Editorial / Journalism
+                        Education
+                        Energy / Natural Resources / Oil & Gas
+                        Engineering
+                        Entertainment - Artists / Singers / Musicians
+                        Environmental Science
+                        Food & Beverage
+                        Gems & Jewelry
+                        General Management
+                        Hospitality / Hotel Services
+                        Human Resources / Recruitment
+                        Information Technology
+                        Insurance
+                        Junior Executive
+                        Laboratory
+                        Legal & Compliance
+                        Life Science
+                        Logistics - Distribution / Inventory Mgt / Warehousing
+                        Manufacturing
+                        Marketing / Public Relations
+                        Media & Communications
+                        Medical Services
+                        Merchandising
+                        Military / Defense
+                        Order Processing & Operation / Settlement
+                        Others
+                        Petroleum / Petrochemical
+                        Pharmaceutical
+                        Photography / VideoProcurement / Purchasing / Sourcing
+                        Property / Real Estate
+                        Quality Assurance, Control & Testing / ISO
+                        Research & Development (R&D)
+                        Research / Survey Services
+                        Sales
+                        Scientist
+                        Security / Safety Control
+                        Skilled Worker
+                        Social Services - Community / Non-profit Organization
+                        Student / Fresh Graduate / No Experience
+                        Telecommunications
+                        Top Executives
+                        Tourism / Travel Agency
+                        Trading
+                        Translation / Interpretation
+                        Transportation / Shipping / Freight Forwarding
+                        Utilities
+                        Health Care
+                        Industrial Machinery / Automation Equipment
+                        Retail Sales & Consumer Marketing
+                        Technical
+                        Furniture
+                        Radiologist
+                        Ophthalmologist
+                        Gynecologist
+                        Pediatrician
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Simple jQuery Validation script to validate your form inputs.
+
+
+$("#formValidate").validate({
+    rules: {
+        uname: {
+            required: true,
+            minlength: 5
+        },
+        cemail: {
+            required: true,
+            email:true
+        },
+        password: {
+    required: true,
+    minlength: 5
+  },
+  cpassword: {
+    required: true,
+    minlength: 5,
+    equalTo: "#password"
+  },
+  curl: {
+            required: true,
+            url:true
+        },
+        crole:"required",
+        ccomment: {
+    required: true,
+    minlength: 15
+        },
+        cgender:"required",
+  cagree:"required",
+    },
+    //For custom messages
+    messages: {
+        uname:{
+            required: "Enter a username",
+            minlength: "Enter at least 5 characters"
+        },
+        curl: "Enter your website",
+    },
+    errorElement : 'div',
+    errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+ });
