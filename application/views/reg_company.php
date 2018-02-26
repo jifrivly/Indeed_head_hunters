@@ -62,8 +62,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body class="container cyan accent-4">
 
-    <div class="row ">
-
         <div class="card hoverable darken-1 ">
             <div class="card-content ">
                 <span class="card-title purple-text center-align"><b>Company Registration</b></span>

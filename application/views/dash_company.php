@@ -179,7 +179,7 @@
                         <i class="fa fa-fw fa-bell"></i>
                         <span class="d-lg-none">Alerts
                             <span class="badge badge-pill badge-warning">6 New</span>
-                        </span>
+                        </span> 
                         <span class="indicator text-warning d-none d-lg-block">
                         <i class="fa fa-fw fa-circle"></i>
                         </span>

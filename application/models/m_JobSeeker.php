@@ -8,9 +8,8 @@
         function addJobSeeker($details)
         {
             $data = array(
-                'id' => NULL,
                 'Register_No'=> $details['reg_no'], 
-                'Name' => $details['first_name'] . $details['last_name'],
+                'Name' => $details['first_name'] . ' ' . $details['last_name'],
                 'Gender' => $details['sex'],
                 'DOB' => $details['dob'],
                 'Address' => $details['address'], 
@@ -22,7 +21,6 @@
                 'Email' => $details['email'], 
                 'M_Number' => $details['mobile'],
                 'secure' => $details['password'],
-                'Register_Date' => date('Y-m-d'),
             );
 
 

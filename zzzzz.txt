@@ -37,11 +37,7 @@ Post Graduation:
 Doctorate/Phd:
 
 Other Certifications
-Diploma/Certificate:
-
-Diploma/Certificate:
-
-Diploma/Certificate:
+        Diploma/Certificate:
 
 Upload Resume
 Attach Resume
@@ -160,22 +156,6 @@ Save & Next
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Simple jQuery Validation script to validate your form inputs.
 
 
@@ -218,9 +198,9 @@ $("#formValidate").validate({
         },
         curl: "Enter your website",
     },
-    errorElement : 'div',
+    errorElement : div,
     errorPlacement: function(error, element) {
-      var placement = $(element).data('error');
+      var placement = $(element).data(error);
       if (placement) {
         $(placement).append(error)
       } else {
@@ -228,3 +208,163 @@ $("#formValidate").validate({
       }
     }
  });
+
+
+
+https://www.w3schools.com/howto/howto_js_autocomplete.asp
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda",
+        "Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh",
+        "Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina",
+        "Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia",
+        "Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China",
+        "Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus",
+        "Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador",
+        "Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland",
+        "France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar",
+        "Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti",
+        "Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man",
+        "Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait",
+        "Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania",
+        "Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta",
+        "Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia",
+        "Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands",
+        "Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea",
+        "Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru",
+        "Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda",
+        "Saint Pierre &amp; Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal",
+        "Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia",
+        "South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia",
+        "St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan",
+        "Tanzania","Thailand","Timor LEste","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey",
+        "Turkmenistan","Turks &amp; Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates",
+        "United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City",
+        "Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+
+
+        date_default_timezone_set("Indian/Mauritius");
+
+
+
+        What type of job is it?
+        What is the salary for this job? (optional)
+        How many hires do you want to make for this position? (optional)
+        Describe the responsibilities of this job, required work experience, skills, or education.
+
+        
+        No. of Openings
+        Preferred Sex
+        Preferred Education Level
+        Age Bar
+
+        Write Education Description Below
+        Write Job Specification Below
+        Write Special Requirement Below
+        
+        
+        
+        job_title
+        job_type
+        job_time
+        job_location
+        job_deadline
+        job_salary
+        job_vacancy
+        job_sex
+        job_age
+
+        job_qualifications
+        job_licenses
+        job_languages
+        job_experience
+        experience_year
+        
+        posted_date
+
+        Array
+        (
+            [Job_Title] => fkjghldfkhv;lqljnfvkj
+            [Job_Type] => Array
+                (
+                    [0] => Contract
+                    [1] => Internship
+                    [2] => Commission
+                    [3] => seasonal
+                )
+
+            [Job_Times] => Array
+                (
+                    [0] => Full_time
+                    [1] => Part_time
+                    [2] => Per_diem
+                )
+
+            [Job_Places] => Array
+                (
+                    [0] => All
+                    [1] => ERANAKULAM
+                    [2] => THRUVANANTHAPURAM
+                    [3] => CALICUT
+                )
+
+            [Job_Deadline] => 0656-06-04
+            [Salary] => 50000-100000
+            [Vacancy] => 8
+            [Sex] => Male
+            [Age] => 20-55
+            [Education] => Array
+                (
+                    [0] => Bachelor of Ayurvedic Medicine & Surgery (B.A.M.S.)
+                    [1] => Bachelor of Business Administration (B.B.A.)
+                    [2] => Bachelor of Commerce (B.Com.)
+                )
+
+            [Licenses] => auto card
+            [Languages] => Array
+                (
+                    [0] => ASSAMESE
+                    [1] => BENGALI
+                    [2] => CHINESE
+                    [3] => ENGLISH
+                )
+
+            [Field] => Database Developer
+            [Year] => 5
+            [post] => 
+        )
+
+Job_Title
+Job_Type[]
+Job_Times[]
+Job_Places[]
+Job_Deadline
+Salary
+Vacancy
+Sex
+Age
+Education[]
+Licenses
+Languages[]
+Field
+Year
+
+
+
+
+        Job_Id	
+        Register_No	
+        Job_Title	
+        Job_Types	
+        Job_Times	
+        Job_Places	
+        Job_Deadline	
+        Job_Salary	
+        Job_Vacancy	
+        Job_Sex	
+        Job_Age	
+        Job_Qualifications	
+        Job_Licenses	
+        Job_Languages	
+        Job_Experience	
+        Experience_Year
+        

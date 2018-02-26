@@ -92,11 +92,11 @@
     <div class="regibg col-md-6">
         <div id="registration" class="regi">
                 
-            <a href="<?php base_url();?>index.php/JobSeeker/Registration"> 
+            <a href="<?php echo base_url();?>index.php/JobSeeker/Registration"> 
                 <button type="button" class="btn btn-outline-success waves-effect waves-light" >Register as JOB SEEKER</button>
             </a>
             <br><br><br><br><br>
-            <a href="<?php base_url();?>index.php/Company/Registration">
+            <a href="<?php echo base_url();?>index.php/Company/Registration">
                 <button type="button" class="btn btn-outline-info waves-effect waves-light" >Register as COMPANY</button>
             </a>
             
@@ -116,7 +116,7 @@
 
         <div id="login" class="logi">
 
-            <a href="<?php base_url();?>index.php/Login">
+            <a href="<?php echo base_url();?>index.php/Login">
                 <button class="btn btn-outline-primary waves-effect waves-light" > LOGIN </button>
             </a>
 

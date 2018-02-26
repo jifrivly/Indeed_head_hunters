@@ -4,38 +4,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_Tools extends CI_Model{
 
 
-    function creatingRegisterNumber($tbl_name)
+    function createUniqueId($tbl_name,$key)
     {
         $count = $this->db->count_all($tbl_name);
         $unique = 100001 + $count;
 
-        if ($tbl_name == 'tbl_job_seeker') {
-            while (1) {
+        while (1) {
+            if ($tbl_name == 'tbl_job_seeker') {
                 $reg_no = 'JS_' . $unique ;
-
-                $q = " SELECT * FROM tbl_job_seeker WHERE Register_no = '$reg_no' ";
-                $result = $this->db->query($q);
-                if($result->num_rows()>0)
-                    $unique++;
-                else
-                    return $reg_no;
             }
-        }
-
-
-        if ($tbl_name == 'tbl_company') {
-            while (1) {
+            
+            
+            if ($tbl_name == 'tbl_company') {
                 $reg_no = 'COM_' . $unique ;
-
-                $q = " SELECT * FROM tbl_company WHERE Register_no = '$reg_no' ";
-                $result = $this->db->query($q);
-                if($result->num_rows()>0)
-                    $unique++;
-                else
-                    return $reg_no;
             }
-        }
+            
+            if ($tbl_name == 'tbl_job') {
+                $reg_no = 'JOB_' . $unique ;   
+            }
 
+            $q = " SELECT * FROM $tbl_name WHERE $key = '$reg_no' ";
+            $result = $this->db->query($q);
+            if($result->num_rows()>0)
+                $unique++;
+            else
+                return $reg_no;
+        }
+        
     }
 
 

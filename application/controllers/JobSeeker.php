@@ -10,10 +10,10 @@ class JobSeeker extends CI_Controller
 
         $project = array(
             'reg_js' => "JOB SEEKER Registration Form ",
-
         );
         
         if (isset($_POST['action'])) {
+            // SERVER SIDE FORM VALIDATION IS HERE
                 $this->createJobSeeker();
             }
         else {
@@ -29,35 +29,27 @@ class JobSeeker extends CI_Controller
         $this->load->model('M_Tools');        
 
         if (isset($_POST['first_name'])) {
-            echo "SuccessFull";
-            echo "<br> Name : " . $_POST['first_name'] . $_POST['last_name'];
-            echo "<br>";
-
             foreach ($_POST as $x => $y) {
-                echo $x . "=" . $y . "<br>";
                 if ($x=='password') {
                     $details[$x] = md5($y);
                     break;
                 }
                 $details[$x] = $y;
             }
-            $details['reg_no'] = $this->M_Tools->creatingRegisterNumber('tbl_job_seeker');
+            $details['reg_no'] = $this->M_Tools->createUniqueId('tbl_job_seeker','Register_No');
 
-            echo "<br><br>";
-            foreach ($details as $x => $y) {
-                echo $x . "=" . $y . "<br>";
-            }
-
-
+            
             $result = $this->M_JobSeeker->addJobSeeker($details);
+            echo "Successfully submited <br>";
 
             if ($result) {
-                echo "Successfully created";
+                echo "Successfully created <br>";
             } else {
-                echo "Some Error on DB";
+                echo "Some Error on DB <br>";
             }
-            
-            
+            testArray($_POST);
+            echo "<br><br>";
+            testArray($details);            
         }
         else {
             $this->load->view('elapsed_time');
