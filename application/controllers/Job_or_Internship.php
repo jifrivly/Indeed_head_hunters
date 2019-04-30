@@ -5,12 +5,32 @@ class Job_or_Internship extends CI_Controller
 {
     function Post()
     {
-        if (isset($_POST['post'])) {
-            // SERVER SIDE FORM VALIDATION IS HERE
-            $this->CreateJob();
-        } else {
-            $this->load->view('job_or_internship_post');
-            $this->load->view('elapsed_time');
+        if (isset($_SESSION['LoginState'] , $_SESSION['LoginType']) && $_SESSION['LoginType'] == 'COMPANY' )
+        {
+            if (isset($_POST['post'])) {
+                // SERVER SIDE FORM VALIDATION IS HERE
+                $create = $this->CreateJob();
+                if ($create) {
+                    echo "Successfully created <br>";
+                    redirect('Hire','refresh');
+                }
+                else {
+                    echo "<b>Sorry!<b> Job is not posted because Some Error on DB <br> please go back and try again!";
+                }
+                
+            } else {
+                $this->load->view('job_or_internship_post');
+                // $this->load->view('elapsed_time');
+            }
+        }
+        else {
+            echo    "Sorry! Please Login as Company to upload Jobs !" . 
+                    '<script>
+                        $(document).ready(function () {
+                            alert("Sorry! Please Login as Company to upload Jobs !"); 
+                        });
+                    </script>';
+            redirect('Login','refresh');
         }
     }
 
@@ -21,8 +41,8 @@ class Job_or_Internship extends CI_Controller
         $this->load->model('M_Tools');
 
         $details['Job_Id'] = $this->M_Tools->createUniqueId('tbl_job','Job_Id');
-        // $details['Register_No'] = $this->session->userdata();
-        $details['Register_No'] = 'COM_100001';
+        $_SESSION['CurrentJobID'] = $details['Job_Id'];
+        $details['Register_No'] = $_SESSION['LoggedInRegisterNo'];
         
         if ($_POST['Job_Title'])
             $details['Job_Title'] = $_POST['Job_Title'];
@@ -65,26 +85,28 @@ class Job_or_Internship extends CI_Controller
 
         if ($_POST['Year'])
             $details['Experience_Year'] = $_POST['Year'];
+
+        if ($_POST['Description']) {
+            $details['Job_Description'] = $_POST['Description'];
+        }
             
         
         $added = $this->M_JobOrInternship->addJob($details);
 
         if ($added) {
-            echo "Successfully created <br>";
+            return TRUE;
         } else {
-            echo "Some Error on DB <br>";
+            return FALSE;
         }
         
-
-        testArray($_POST);
-        testArray($details);
+        // testArray($_POST);
+        // testArray($details);
     }
-}
-        
-
-
 
     
+
+}
+
     /* End of file Job_or_Internship.php */
     
 ?>

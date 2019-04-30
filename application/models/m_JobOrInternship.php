@@ -33,9 +33,10 @@ class M_JobOrInternship extends CI_Model
         }
     }
 
-
+    
 
 }
+
 
 
 /* End of file filename.php */

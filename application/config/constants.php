@@ -109,6 +109,16 @@ define('_JOB_TIMES',
         )
     );
 
+define('_JOB_PLACES', 
+    array(
+        'ERANAKULAM',
+        'THRUVANANTHAPURAM',
+        'CALICUT',
+
+        )
+    );
+    
+
 define('_BACHELOR_DEGREES', 
     array(
         'Bachelor of Architecture (B.Arch.)'                                => 'Bachelor of Architecture (B.Arch.)',

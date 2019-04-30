@@ -64,9 +64,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="input-field col l6 s12" >
                     <select name="Job_Places[]" id="jobplaces" multiple required>
                         <option value="All">ALL</option>
-                        <option value="ERANAKULAM">ERANAKULAM</option>
-                        <option value="THRUVANANTHAPURAM">THRUVANANTHAPURAM</option>
-                        <option value="CALICUT">CALICUT</option>
+                        <?php 
+                            foreach (_JOB_PLACES as $x) {
+                                echo '<option value="' . $x . '">' . $x . '</option>';
+                            }
+                        ?>
                     </select>
                     <label for="jobplaces">SELECT JOB LOCATIONS ( WORKING PLACES ) </label>
                     <span class="helper-text">Specify What cities is the job located in? <b class="red-text"> * Required </b> </span>
@@ -152,6 +154,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input type="number" name="Year" id="year" min="1" max="60">
                 </div>            
             </div>
+            <div class="row">
+                <div class="input-field col l12 s12" >
+                    <label for="description"> FEW WORDS ABOUT THE JOB </label>
+                    <textarea name="Description" id="description" class="materialize-textarea" required="required"></textarea>
+                    <span class="helper-text"> To simply understand about job or your requirements <b class="red-text"> * Required </b> </span>
+                </div>
+            </div>    
             
 
             <!-- <?php

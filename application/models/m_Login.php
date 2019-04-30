@@ -15,7 +15,7 @@ class M_Login extends CI_Model{
         $result = $this->db->query($q);
 
         if ($result->num_rows()>0) {
-            $temp=new stdClass;
+            $temp = new stdClass;
 
             $temp->LoggedIn = "TRUE";
             $temp->LoginType = "JOBSEEKER";
@@ -27,7 +27,7 @@ class M_Login extends CI_Model{
             $result = $this->db->query($q);
 
             if ($result->num_rows()>0) {
-                $temp=new stdClass;
+                $temp = new stdClass;
     
                 $temp->LoggedIn = "TRUE";
                 $temp->LoginType = "COMPANY";

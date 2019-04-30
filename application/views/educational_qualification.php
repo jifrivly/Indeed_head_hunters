@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row " id="sslc" hidden>
                 <h6> <b> <u> SSLC Details </u> </b> </h6>
                 <div class="input-field col l6 s12">
-                    <input type="text" name="SSLC_Board" id="sslcboard" value=" ">
+                    <input type="text" name="SSLC_Board" id="sslcboard" >
                     <label for="sslcboard">Board Of Examination</label>
                 </div>
                 <div class="input-field col l6 s12">
@@ -317,9 +317,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h6><b><u> About your interests and hobbies </u></b></h6>
             <div class="row">
                 <div class="input-field col l6 s12">
-                    <label for="places">Interested places to work : </label>
-                    <textarea name="Places" id="places" class="materialize-textarea"></textarea>
-                    <span class="helper-text">Specify with name of city seperated with commas (e.g - Mumbai, Chennai, Haiderabad ....)</span>
+                    <select name="Places[]" id="places" multiple required>
+                        <option value="All">ALL</option>
+                        <?php 
+                            foreach (_JOB_PLACES as $x) {
+                                echo '<option value="' . $x . '">' . $x . '</option>';
+                            }
+                        ?>
+                    </select>
+                    <label for="places">Interested places to work <b class="red-text"> * </b> </label>
+                    <span class="helper-text"></span>
                 </div>
                 <div class="input-field col l6 s12">
                     <select name="Times[]" id="times" multiple required>

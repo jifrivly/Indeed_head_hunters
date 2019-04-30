@@ -401,7 +401,7 @@ class CI_Email {
 
 		log_message('info', 'Email Class Initialized');
 	}
-
+	
 	// --------------------------------------------------------------------
 
 	/**

@@ -58,14 +58,7 @@ class JobSeeker extends CI_Controller
         
     }
 
-    public function DashBoard()
-	{
-		$this->load->view('dash_jobseeker');
-		$this->load->view('elapsed_time');
-
-	}
-
-
+    
     
 }
 

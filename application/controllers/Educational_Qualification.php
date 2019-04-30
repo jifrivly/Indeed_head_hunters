@@ -6,17 +6,35 @@ class Educational_Qualification extends CI_Controller{
 // START of main function 
     function index()
     {
-        if (isset($_POST['action'])) {
-            $s = $this->AddData();
-            if ($s) {
-                echo "Success";
-            } else {
-                echo "fail";
+        if (isset($_SESSION['LoginType']) && $_SESSION['LoginType'] == "JOBSEEKER") {
+
+            // checking qualifications are entered
+            $this->load->model('m_GetDetails');
+            $details = $this->m_GetDetails->JSQualification($_SESSION['LoggedInRegisterNo']);
+            if ($details) {
+                echo "You already entered the details";
+                redirect('DashBoard','refresh');                                                       
             }
-            
-        } else {
-            $this->load->view('educational_qualification');
+            else{
+                if (isset($_POST['action'])) {
+                    $s = $this->AddData();
+                    if ($s) {
+                        echo "Success";
+                        
+                        redirect('Login','refresh');
+                    } else {
+                        echo "fail";
+                    }
+                } else {
+                    $this->load->view('educational_qualification');
+                }
+            }
         }
+        else {
+            echo "Login as jobseeker to add educational qualifications ";
+            redirect('Login','refresh');
+        }
+                
     }
 // END of main function
 
@@ -26,6 +44,7 @@ class Educational_Qualification extends CI_Controller{
     {
         $this->load->model('M_Qualification');
 
+        $education['Register_No'] = $_SESSION['LoggedInRegisterNo'];     
         if ($_POST['SSLC_Board']) {
             $education['SSLC_Board'] = $_POST['SSLC_Board'];
             $education['SSLC_Mark'] = $_POST['SSLC_Mark'];
@@ -197,10 +216,19 @@ class Educational_Qualification extends CI_Controller{
         // } else {
         }
         
-        $interest['Place'] = $_POST['Places'];
-        $interest['Time'] = ArrayToString($_POST['Times']);
-        $interest['Hobbies'] = $_POST['Hobbies'];
-        $interest['Extra_Achievements'] = $_POST['Extras'];
+        $interest['Register_No'] = $_SESSION['LoggedInRegisterNo'];
+        if ($_POST['Places']) {
+            $interest['Place'] = ArrayToString($_POST['Places']);
+        }
+        if ($_POST['Times']) {
+            $interest['Time'] = ArrayToString($_POST['Times']);
+        }
+        if ($_POST['Hobbies']) {
+            $interest['Hobbies'] = $_POST['Hobbies'];
+        }
+        if ($_POST['Extras']) {
+            $interest['Extra_Achievements'] = $_POST['Extras'];
+        }
 
 
         foreach ($_POST as $x => $y) {
@@ -212,6 +240,11 @@ class Educational_Qualification extends CI_Controller{
                     echo $my_choices[$i] . " , ";
                 }
                 echo '<br>';
+                continue;
+            }
+            if ($x == 'Places') {
+                testArray($_POST['Places']);
+                echo '<br />';
                 continue;
             }
 

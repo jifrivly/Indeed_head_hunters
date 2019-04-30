@@ -170,9 +170,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Phone Number -->
                     <div class="input-field col l6 s12">
                         <i class="material-icons prefix">phone</i>
-                        <input type="tel" name="mobile" id="mobile" class="validate" required>
+                        <input type="tel" name="mobile" id="mobile" class="validate" pattern="[0-9]{10,13}" required>
                         <label for="mobile">Mobile Number * </label>
-                        <span class="helper-text" data-error="it seems wrong" data-success="right"> Enter valid phone number </span>
+                        <span class="helper-text" data-error="it seems wrong" data-success="right"> Enter valid phone number ( including country code with out + ) </span>
                         
                     </div>
                 </div>
@@ -213,8 +213,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--  -->
     
                     <div class="input-field col l6 s12">
-                        <input id="" type="text" >
-                        <label for="">Something</label>
+                        <!-- <input id="" type="text" >
+                        <label for="">Something</label> -->
                     </div>
                 </div>
                 
@@ -231,9 +231,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Phone Number -->
                     <div class="input-field col l6 s12">
                         <i class="material-icons prefix">phone</i>
-                        <input type="tel" name="person_mobile" id="person_mobile" class="validate" required>
+                        <input type="tel" name="person_mobile" id="person_mobile" class="validate" pattern="[0-9]{10,13}"  required>
                         <label for="person_mobile">Mobile Number * </label>
-                        <span class="helper-text" data-error="it seems wrong" data-success="right"> Phone number of persone </span>
+                        <span class="helper-text" data-error="it seems wrong" data-success="right"> Phone number of persone ( including country code with out + ) </span>
                         
                     </div>
                 </div>

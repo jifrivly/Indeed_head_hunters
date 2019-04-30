@@ -16,9 +16,12 @@ class Company extends CI_Controller
         if (isset($_POST['action'])) {
     // SERVER SIDE FORM VALIDATION IS HERE
             $this->CreateCompany();
+            
+            redirect('Login','refresh');
+            
         } else {
             $this->load->view('reg_company',$project);
-            $this->load->view('elapsed_time');
+            // $this->load->view('elapsed_time');
         }
         
     }
@@ -55,13 +58,8 @@ class Company extends CI_Controller
         
     }
 
-    public function DashBoard()
-	{
-		$this->load->view('dash_Company');
-		$this->load->view('elapsed_time');
-
-	}
-
+    
+    
 
 }
 

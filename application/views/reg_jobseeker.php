@@ -112,7 +112,7 @@
 
         <!-- Pincode -->
                     <div class="input-field col l6 s12">
-                        <input id="" type="text" class="" name="pincode">
+                        <input id="" type="text" class="" name="pincode" pattern="[0-9]{6,10}" >
                         <label for="pincode">Pincode</label>
                     </div>
                 </div>
@@ -132,9 +132,9 @@
         <!-- Phone Number -->
                     <div class="input-field col l6 s12">
                         <i class="material-icons prefix">phone</i>
-                        <input type="tel" name="mobile" id="" class="validate" name="mobile" required>
+                        <input type="tel" name="mobile" id="" class="validate" name="mobile" pattern="[0-9]{10,13}" required>
                         <label for="mobile">Mobile Number * </label>
-                        <span class="helper-text" data-error="it seems wrong" data-success="right">Please specify valid phone number. Recruiters will contact you on this number</span>
+                        <span class="helper-text" data-error="it seems wrong" data-success="right">Please specify valid phone number ( including country code with out + ) . Recruiters will contact you on this number</span>
                         
                     </div>
                 </div>
@@ -148,10 +148,10 @@
                         <span class="helper-text ">Password is Case-Sensitive. Use 8 to 20 character </span>
                     </div>
                     
-        <!-- Conform password -->
+        <!-- Confirm password -->
                     <div class="input-field col l6 s12">
                         <input type="password" name="password_2" id="password_2" required>
-                        <label for="password_2">Conform the password</label>
+                        <label for="password_2">Confirm the password</label>
                         <span class="helper-text">Same as above password </span>
                     </div>
                 </div>
