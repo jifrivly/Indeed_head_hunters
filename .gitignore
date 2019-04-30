@@ -9,7 +9,7 @@ application/logs/*
 !application/*/.htaccess
 
 #sessions
-system/cache/sessions/
+system/cache/sessions/*
 
 composer.lock
 
@@ -23,12 +23,3 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 #-------------------------
 /nbproject/
 .idea/*
-
-## Sublime Text cache files
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
-/tests/tests/
-/tests/results/
