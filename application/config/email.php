@@ -15,7 +15,7 @@
     $config['validate'] = TRUE;
     $config['smtp_timeout'] = '30';
     $config['smtp_user'] = 'SMTP_Injection';
-    $config['smtp_pass'] = '90bdc3bef18c1747f6eac041504a9dcba75f1e4f';
+    $config['smtp_pass'] = 'sparkpostmail-api-key';
     $config['charset'] = 'utf-8';
     // $config['charset'] = 'iso-8859-1';
     $config['mailtype'] = 'html';
